@@ -665,7 +665,7 @@ OWNER to postgres;
 
 ### clase 13 Particiones
 
-En ocasiones llega un punto en elq ue tienes mucha informacion en una sola tabla, y al momento de consultarla la base de datos tendrá que hacer el recorrido de toda la informacion para encontrar el contenido que estas buscando.
+En ocasiones llega un punto en el que tienes mucha informacion en una sola tabla, y al momento de consultarla la base de datos tendrá que hacer el recorrido de toda la informacion para encontrar el contenido que estas buscando.
 
 Imagina que nuestra tabla de viajes tiene cien mil registros, y que quieres consultar los viajes realizados en un rango de fechas, esa consulta ocupara un espacio en memoria que deberá ser leída para obtener la respuesta, en este punto entran las particiones.
 
