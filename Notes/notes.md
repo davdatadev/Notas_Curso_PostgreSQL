@@ -1157,19 +1157,20 @@ WHERE modelo is NULL;
 
 Funciones mas comunes en postgres:
 
-- **COALESCE:** permite comprar dos valores y retornar cual de los dos no es nulo
+- **COALESCE:** permite comparar dos valores y retornar cual de los dos no es nulo
 
 - **NULLIF:** permite comparar dos valores y retorna Null si son iguales
   
-- **GREATEST:** permite comprar un arreglo de valores y retorna el mayor
+- **GREATEST:** permite comaprar un arreglo de valores y retorna el mayor
 
-- **LEAST:** permite comprar un arreglo de valores y retorna el menor
+- **LEAST:** permite comparar un arreglo de valores y retorna el menor
 
 - **BLOQUES ANÓNIMOS:** permite ingresar condicionales dentro de una consulta de base de datos.
 
 **Ejemplo COALESCE**.
 
-Primero modificar tabla pasajero para tener un dato como nulo.
+Primero modificar tabla pasajero para tener un dato como nulo. 
+Se puede escoger que valor tomán los datos nulos al consultarlos en el siguiente ejemplo es **No Aplica**
 
 ![funciones_especiales_6](src/funciones_especiales_6.jpg)
 
@@ -1179,6 +1180,8 @@ FROM public.pasajero WHERE id = 1;
 ```
 
 **Ejemplo NULLIF**.
+
+Te permite comparar 2 valores y retorna NULL si son iguales. Si no son iguales retorna el argumento de la izquierda. Esta función se puede usar como denominador de una división con el argumento de la izquierda igual a cero. La división siempre se dividirá por el argumento de la izquierda salvo cuando sea cero. Para ese caso NULLIF devuelve NULL, haciendo que el resultado de la división sea NULL y no indefinido.
 
 ![funciones_especiales_7](src/funciones_especiales_7.jpg)
 
@@ -1203,6 +1206,8 @@ SELECT LEAST (0, 1,2,3,4,5,6);;
 ```
 
 **Ejemplo BLOQUES ANÓNIMOS**.
+
+Te permite ingresar condicionales pero dentro de una consulta de base de datos.
 
 ![funciones_especiales_10](src/funciones_especiales_10.jpg)
 
